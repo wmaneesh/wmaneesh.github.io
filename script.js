@@ -23,33 +23,8 @@ const navSlide = () => {
   });
 };
 
-
 navSlide();
 
-// let number = document.getElementById("phone-text");
-
-// // This handler will be executed only once when the cursor
-// // moves over the text
-// number.addEventListener("mouseover", function (event) {
-//   // change the text when the mouse is over it
-//   //   number.style.opacity = 0;
-//   number.innerHTML = "416-841-8915";
-
-//   // reset the text after a short delay
-//   //   setTimeout(function () {
-//   //     // number.style.opacity = 1;
-//   //     number.innerHTML = "416-841-8915";
-//   //   }, 1000);
-// });
-
-// number.addEventListener("onmouseout", function (event) {
-//   //   number.style.opacity = 1;
-
-//   setTimeout(function () {
-//     number.innerHTML = "&nbsp &nbsp &nbsp &nbsp Phone &nbsp &nbsp &nbsp";
-//     // number.style.opacity = 1;
-//   }, 2500);
-// });
 
 //scroll reveal for the about text and contact links
 const sr = ScrollReveal({ viewOffset: { top: 65 } });
