@@ -6,6 +6,8 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
 }
 
 body {
@@ -26,6 +28,14 @@ body {
   max-width: 2200px;
   margin: 0 auto;
   padding: 0 70px;
+}
+
+.main-intro {
+  scroll-snap-align: start;
+}
+
+#about {
+  scroll-snap-align: start;
 }
 
 .logo {
@@ -307,6 +317,12 @@ nav {
   font-weight: 600;
   font-size: 3rem;
   margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+  .intro-box {
+    padding: 40vh 0 0 10vh;
+  }
 }
 
 @media (max-width: 1050px) {

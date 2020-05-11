@@ -25,7 +25,6 @@ const navSlide = () => {
 
 navSlide();
 
-
 //scroll reveal for the about text and contact links
 const sr = ScrollReveal({ viewOffset: { top: 65 } });
 sr.reveal(".about-box", {
@@ -48,13 +47,3 @@ sr.reveal(".contact-links a", {
   delay: 500,
   useDelay: "once",
 });
-
-var anchor = "";
-document.documentElement.dataset.scroll = 0;
-var about = document.getElementById("about");
-
-// $(function () {
-//   $(".nav-links a").click(function () {
-//     anchor = $(this).attr("href");
-//   });
-// });
