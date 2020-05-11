@@ -39,7 +39,7 @@ sr.reveal(".contact-title", {
 
 sr.reveal(".contact-links a", {
   origin: "bottom",
-  distance: "25px",
+  distance: "50px",
   duration: 1000,
   viewFactor: 1,
   interval: 500,
@@ -47,3 +47,56 @@ sr.reveal(".contact-links a", {
   delay: 500,
   useDelay: "once",
 });
+
+// var id;
+
+// var image_class = $(document).ready(function () {
+//   $(".project-image").click(function () {
+//     id = $("img", this).attr("class").split(" ").pop();
+//     console.log(id);
+//   });
+// });
+
+// console.log(image_class);
+
+// $(image_class)
+//   .click(function (e) {
+//     if ($(e.target).hasClass("expanded")) {
+//       $("." + id)
+//         .removeClass("expanded")
+//         .stop()
+//         .animate(
+//           {
+//             width: 500,
+//             height: 300,
+//           },
+//           200
+//         );
+//     } else {
+//       $("#projects")
+//         .find("." + id)
+//         .fadeTo(0, 1);
+//       $("." + id)
+//         .addClass("expanded")
+//         .stop()
+//         .animate(
+//           {
+//             width: 800,
+//             height: 533,
+//           },
+//           200
+//         );
+//     }
+//   })
+//   .mouseout(function () {
+//     $("." + id)
+//       .removeClass("expanded")
+//       .stop()
+//       .animate(
+//         {
+//           width: 500,
+//           height: 300,
+//         },
+//         200
+//       );
+//   });

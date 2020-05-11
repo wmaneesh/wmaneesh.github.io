@@ -24,6 +24,15 @@ body {
   max-width: 2200px;
 } */
 
+img:hover {
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+  transition: all 0.2s ease-out;
+  z-index: 4;
+}
+
 .container {
   max-width: 2200px;
   margin: 0 auto;
@@ -705,14 +714,16 @@ article {
 
 .project-image {
   align-self: stretch;
-  width: 450px;
+  width: 500px;
+  height: 300px;
   display: flex;
   border: 1px solid grey;
 }
 
 img.p-image {
+  object-fit: cover;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .project-data {
@@ -772,10 +783,13 @@ img.p-image {
   }
 
   .project-image {
-    width: 80%;
+    width: 500px;
+    height: 300px;
+    /* width: 80%; */
     margin-bottom: 10%;
     margin-left: auto;
     margin-right: auto;
+    border: 0;
   }
 
   .project-data {
@@ -794,6 +808,8 @@ img.p-image {
     width: 100%;
     margin-top: 2rem;
     margin-bottom: 3rem;
+    justify-content: start;
+    align-items: center;
   }
 
   #project-main-title {
@@ -803,6 +819,15 @@ img.p-image {
 
   .project-title {
     font-size: 1.5rem;
+  }
+
+  .project-image {
+    width: 80%;
+    height: 100%;
+  }
+
+  img.p-image {
+    object-fit: contain;
   }
 
   .project-desc {
@@ -856,6 +881,7 @@ img.p-image {
 @media (max-width: 640px) {
   .contact-links {
     width: 100%;
+    height: 100%;
   }
 
   .contact-title {
