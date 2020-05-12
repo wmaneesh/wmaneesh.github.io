@@ -724,7 +724,7 @@ article {
   margin-bottom: 5rem;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .project-image {
@@ -732,6 +732,7 @@ article {
   width: 500px;
   height: 300px;
   display: flex;
+  align-self: center;
   border: 1px solid grey;
 }
 
