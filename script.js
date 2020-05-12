@@ -40,11 +40,11 @@ sr.reveal(".contact-title", {
 sr.reveal(".contact-links a", {
   origin: "bottom",
   distance: "50px",
-  duration: 1000,
+  duration: 900,
   viewFactor: 1,
-  interval: 500,
+  interval: 300,
   reset: true,
-  delay: 500,
+  delay: 300,
   useDelay: "once",
 });
 
