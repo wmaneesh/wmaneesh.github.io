@@ -796,6 +796,15 @@ img.p-image {
     align-self: auto;
     max-width: 80%;
   }
+
+  img:hover {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    transition: all 0.2s ease-out;
+    z-index: 4;
+  }
 }
 
 @media (max-width: 640px) {
