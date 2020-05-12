@@ -8,6 +8,24 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/site.webmanifest" />
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <title>Maneesh Withanagamage</title>
@@ -41,7 +59,7 @@
         <div class="intro-box">
           <h2 class="intro-text">Hi, my name is</h2>
           <span class="intro-name">Maneesh Withanagamage.</span>
-          <h2 class="intro-text">Embedded Systems Developer.</h2>
+          <h2 class="intro-text">I'm a Computer Engineering Student</h2>
         </div>
         <section id="section05" class="demo">
           <a href="#about"><span></span>find out more</a>
@@ -52,25 +70,18 @@
     <div id="about">
       <section id="about-me-scroll" class="about-me">
         <div class="about-image">
-          <div class="me-image"><img src="images/personal_pic.png" /></div>
+          <div class="me-image"><img src="images/supermoon7.jpg" /></div>
         </div>
         <div id="about-box-id" class="about-box">
           <div class="about-title">
             <h1>about me</h1>
             <div class="about-text">
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum at
-                accusamus dolorum. Nisi eaque eligendi aspernatur enim quisquam
-                asperiores quaerat placeat odit est et tempora, harum illo at
-                quasi adipisci. Lorem ipsum dolor sit amet consectetur,
-                adipisicing elit. Reprehenderit, perferendis repellendus
-                accusamus, odio placeat cupiditate porro sed labore distinctio,
-                blanditiis eum voluptatem? Doloribus consequuntur unde deserunt
-                delectus beatae. Aliquid, aperiam! Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Necessitatibus dolorem dicta
-                nostrum, debitis dolor, consequuntur, culpa reprehenderit
-                perspiciatis aliquid natus molestiae velit sint praesentium
-                dolorum deserunt soluta neque aut. Corrupti.
+                I am a fifth-year computer engineering student at York
+                University. Although my interest lies towards Embedded Systems
+                Developer, my passion to learn and explore newer topics have
+                given the me the opportunity to delve into Front-end
+                Development.
               </p>
               <div class="resume">
                 <a
@@ -91,7 +102,7 @@
         <article>
           <div class="project-image">
             <img
-              src="images/Embedded_Project.png"
+              src="images/final_system.jpg"
               class="p-image project-1-image"
               alt="Article Photo"
             />
@@ -99,14 +110,20 @@
           <div class="project-data">
             <h2 class="project-title">Automated Temperature Controlled Fan</h2>
             <p class="project-desc">
-              Some information about the project goes here. <br />
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-              exercitationem ducimus excepturi soluta quod, magni, voluptatem
-              praesentium quos labore autem tempore perferendis ipsam iure ab.
-              Voluptates optio officia voluptatum blanditiis!"
+              An Embedded Systems Project built to automate the fan speed.<br />
+              The embedded system controlls the speed of a 12V DC fan depending
+              on the ambient room temperature. Depending on the ambient room
+              temperature, read from the onboard LM74 temperature sensor, the
+              PWM duty cycle is adjusted. The displays show the current
+              temperature, the mode of operation (Auto or Manual) and the fan
+              speed. The button provides the user with the ability to to change
+              between Automatic to Manual. When in manual mode the buttons can
+              be used to change the fan speed from low, mid to high.
             </p>
             <div class="source-code">
-              <a class="button" href="https://github.com/wmaneesh/AutomatedFan">Source Code</a>
+              <a class="button" href="https://github.com/wmaneesh/AutomatedFan"
+                >GitHub</a
+              >
             </div>
           </div>
         </article>
@@ -126,10 +143,17 @@
               intent for using this was that only one instance of the board was
               created. The chess pieces were created using the inheritence
               principle. For implementing undo/redo functionality to the game,
-              Command Design pattern was used.
+              Command Design pattern was used. The game can be played by typing
+              commands such as setup_chess (piece, x, y), start_game, reset
+              game, moves(x,y) and move_and_capture(initial_x, initial_y,
+              final_x, final_y).
             </p>
             <div class="source-code">
-              <a class="button" href="https://github.com/wmaneesh/ChessSolitaire">Source Code</a>
+              <a
+                class="button"
+                href="https://github.com/wmaneesh/ChessSolitaire"
+                >GitHub</a
+              >
             </div>
           </div>
         </article>

@@ -24,12 +24,13 @@ body {
   max-width: 2200px;
 } */
 
-img:hover {
+.p-image:hover {
   -webkit-transform: scale(2);
   -moz-transform: scale(2);
   -o-transform: scale(2);
   transform: scale(2);
   transition: all 0.2s ease-out;
+
   z-index: 4;
 }
 
@@ -59,9 +60,9 @@ img:hover {
 .img-logo {
   display: flex;
   align-items: center;
-  margin-top: 25px;
-  height: 130px;
-  width: 130px;
+  margin-top: 0px;
+  height: 80px;
+  width: 80px;
 }
 
 .main-header-name {
@@ -219,7 +220,12 @@ nav {
     cursor: pointer;
   }
 
-  img:hover {
+  .img-logo {
+    height: 40px;
+    width: 40px;
+  }
+
+  .p-image:hover {
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -o-transform: scale(1);
