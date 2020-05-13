@@ -5,10 +5,10 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth;
   scroll-snap-type: y proximity;
   overflow-y: scroll;
-  overflow: auto;
+  overflow: auto; */
 }
 
 body {
@@ -41,13 +41,13 @@ body {
   padding: 0 70px;
 }
 
-.main-intro {
+/* .main-intro {
   scroll-snap-align: start;
 }
 
 #about {
   scroll-snap-align: start;
-}
+} */
 
 .logo {
   display: flex;
