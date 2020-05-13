@@ -8,6 +8,7 @@ html {
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
   overflow-y: scroll;
+  overflow: auto;
 }
 
 body {
