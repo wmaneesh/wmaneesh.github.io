@@ -48,6 +48,59 @@ sr.reveal(".contact-links a", {
   useDelay: "once",
 });
 
+//scroll for find out more
+$("#section05").click(function () {
+  $("html,body").animate(
+    {
+      scrollTop: $("#about").offset().top,
+    },
+    "slow"
+  );
+});
+
+//scroll for find out more
+$("#section05").click(function () {
+  $("html,body").animate(
+    {
+      scrollTop: $("#about").offset().top,
+    },
+    "slow"
+  );
+});
+
+$(document).ready(function () {
+  $('a[href^="#"]').on("click", function (e) {
+    e.preventDefault();
+
+    var target = this.hash,
+      $target = $(target);
+
+    $("html, body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $target.offset().top,
+        },
+        900,
+        "swing",
+        function () {
+          window.location.hash = target;
+        }
+      );
+  });
+});
+
+// $(function () {
+//   $("#section05").on("click", function (e) {
+//     e.preventDefault();
+//     $("body").animate(
+//       { scrollTop: $($(this).attr("#about")).offset().top },
+//       500,
+//       "linear"
+//     );
+//   });
+// });
+
 // var id;
 
 // var image_class = $(document).ready(function () {
