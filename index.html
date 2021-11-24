@@ -168,6 +168,40 @@
         <article>
           <div class="project-image">
             <img
+              src="images/LRU.png"
+              class="p-image project-3-image"
+              alt="Article Photo"
+            />
+          </div>
+          <div class="project-data">
+            <h2 class="project-title">
+              Aplication Specific Integrated Circuit (ASIC)
+            </h2>
+            <p class="project-desc">
+              A VLSI deisign that implements the Least Recently Used (LRU)
+              algorithm for replacing memory in a 4-way set-associative cache in
+              a 600nM processor.
+              <br />
+              The ASIC kept track of how often each way in each set is accessed
+              by using a 2-bit counter. This counter was used to calculate the
+              LRU logic. The chip itself is consisted of several modules,
+              however, the two main modules were the Controller and Datapath.
+              These two modules were the ones that implement the core LRU
+              algorith. The Controller was responsible for providing the control
+              signals to the rest of the system base on the sate of a Finite
+              State Machine (FSM). The Datapath was responsible for performing
+              all the data processing operations. It consisted of a collection
+              of functional units that performed the arithmetic operations. The
+              project included designing verilog code and simulating them,
+              designing schematics and layouts and building them in Virtuoso.
+            </p>
+            <div class="source-code"></div>
+          </div>
+        </article>
+
+        <article>
+          <div class="project-image">
+            <img
               src="images/ConformGlass.png"
               class="p-image project-3-image"
               alt="Article Photo"
@@ -187,11 +221,7 @@
               clients needs.
             </p>
             <div class="source-code">
-              <a
-                class="button"
-                href="https://github.com/wmaneesh/TrafficLightSystem"
-                >GitHub</a
-              >
+              <a class="button" href="https://conformglass.ca/">ConformGlass</a>
             </div>
           </div>
         </article>
