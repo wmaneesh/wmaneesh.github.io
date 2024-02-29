@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/david_website_styles/style.css" />
+    <link rel="stylesheet" href="styles/david_website_styles/musicNotes.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <ul>
+          <li><a href="#" id="settings">Settings</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section>
+      <div class="flex flex-col justify-center items-center text-[#014235]">
+        <h1 class="text-8xl font-libre">Note Reading</h1>
+        <h1 class="text-4xl italic font-lato">For Piano</h1>
+      </div>
+    </section>
+
+    <section class="quiz">
+      <div class="flex flex-col justify-center items-center py-20">
+        <div class="quiz-question">
+          <div
+            class="w-[950px] h-[550px] flex flex-col justify-center items-center relative"
+          >
+            <div
+              id="score"
+              class="absolute right-[50px] top-0 items-start z-10"
+            >
+              Score: 0/0
+            </div>
+            <canvas
+              id="staff-layer"
+              width="950"
+              height="500"
+              class="absolute z-0"
+            ></canvas>
+            <canvas
+              id="note-layer"
+              width="950"
+              height="500"
+              class="absolute z-10"
+            ></canvas>
+          </div>
+        </div>
+        <div
+          class="flex justify-between flex-col [&_button]:w-16 [&_button]:m-3"
+        >
+          <div
+            id="option-buttons"
+            class="neutral font-libre text-5xl text-[#014235]"
+          >
+            <button
+              type="button"
+              class="hover:bg-gray-100 font-bold rounded"
+              id="A"
+            >
+              A
+            </button>
+            <button
+              type="button"
+              class="hover:bg-gray-100 font-bold rounded"
+              id="B"
+            >
+              B
+            </button>
+            <button
+              type="button"
+              class="hover:bg-gray-100 font-bold rounded"
+              id="C"
+            >
+              C
+            </button>
+            <button
+              type="button"
+              class="hover:bg-gray-100 font-bold rounded"
+              id="D"
+            >
+              D
+            </button>
+            <button
+              type="button"
+              class="hover:bg-gray-100 font-bold rounded"
+              id="E"
+            >
+              E
+            </button>
+            <button
+              type="button"
+              class="hover:bg-gray-100 font-bold rounded"
+              id="F"
+            >
+              F
+            </button>
+            <button
+              type="button"
+              class="hover:bg-gray-100 font-bold rounded"
+              id="G"
+            >
+              G
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="scripts/david_website_scripts/constants.js"></script>
+    <script src="scripts/david_website_scripts/settings.js"></script>
+    <script src="scripts/david_website_scripts/canvas.js"></script>
+    <script src="scripts/david_website_scripts/questions.js"></script>
+  </body>
+</html>

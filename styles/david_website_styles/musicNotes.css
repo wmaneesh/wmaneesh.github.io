@@ -1,0 +1,173 @@
+body {
+  padding: 5em;
+}
+.bar {
+  position: relative;
+  display: inline-block;
+  width: 12px;
+  height: 32px;
+  margin: 0 12px;
+  margin-bottom: 48px;
+  width: 2px;
+  border-right: 1px solid black;
+}
+.debug .bar {
+  outline: 1px solid rgba(255, 0, 0, 0.1);
+}
+.bar.double,
+.bar.end {
+  border-left: 1px solid black;
+}
+.bar.end {
+  float: right;
+  border-right-width: 4px;
+  margin-right: 0;
+}
+.staff {
+  font-size: 0;
+  background-image: linear-gradient(
+    180deg,
+    #000000 0,
+    #000000 1px,
+    transparent 1px,
+    transparent 31px,
+    #000000 31px,
+    #000000 32px,
+    transparent 32px,
+    transparent 62px,
+    #000000 62px,
+    #000000 63px,
+    transparent 63px,
+    transparent 93px,
+    #000000 93px,
+    #000000 94px,
+    transparent 94px,
+    transparent 124px,
+    #000000 124px,
+    #000000 125px,
+    transparent 125px
+  );
+  background-size: 100% 80px;
+}
+.staffOrignal {
+  font-size: 0;
+  background-image: linear-gradient(
+    180deg,
+    #999 0,
+    #999 1px,
+    transparent 1px,
+    transparent 8px,
+    #999 8px,
+    #999 9px,
+    transparent 9px,
+    transparent 16px,
+    #999 16px,
+    #999 17px,
+    transparent 17px,
+    transparent 24px,
+    #999 24px,
+    #999 25px,
+    transparent 25px,
+    transparent 32px,
+    #999 32px,
+    #999 33px,
+    transparent 33px
+  );
+  background-size: 100% 80px;
+}
+.staff.debug {
+  background-color: rgba(0, 255, 0, 0.1);
+}
+.note {
+  position: relative;
+  display: inline-block;
+  width: 12px;
+  height: 32px;
+  margin: 0 12px;
+  margin-bottom: 48px;
+}
+.debug .note {
+  outline: 1px solid rgba(255, 0, 0, 0.1);
+}
+.note::before {
+  height: 8px;
+  width: 12px;
+}
+.whole.note::before {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-left-width: 4px;
+  border-right-width: 4px;
+  border-radius: 50%;
+}
+.half.note::after,
+.quarter.note::after {
+  content: "";
+  height: 28px;
+  width: 1px;
+  background-color: black;
+  position: absolute;
+  top: -24px;
+  right: 0;
+}
+.half.note::before,
+.quarter.note::before {
+  position: absolute;
+  content: "";
+  transform: rotatez(-15deg);
+  border-radius: 50%;
+}
+.half.note::before {
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-top-width: 2.18181818px;
+  border-bottom-width: 2.18181818px;
+}
+.quarter.note::before {
+  background-color: black;
+}
+.note.d4 {
+  top: 32px;
+}
+.note.e4 {
+  top: 28px;
+}
+.note.f4 {
+  top: 24px;
+}
+.note.g4 {
+  top: 20px;
+}
+.note.a5 {
+  top: 16px;
+}
+.note.b5 {
+  top: 12px;
+}
+.note.c5 {
+  top: 8px;
+}
+.note.d5 {
+  top: 4px;
+}
+.note.e5 {
+  top: 0px;
+}
+.note.f5 {
+  top: -4px;
+}
+.note.g5 {
+  top: -8px;
+}
+.quarter.note.d5::after,
+.half.note.d5::after,
+.quarter.note.e5::after,
+.half.note.e5::after,
+.quarter.note.f5::after,
+.half.note.f5::after,
+.quarter.note.g5::after,
+.half.note.g5::after {
+  top: 4px;
+}
