@@ -15,37 +15,52 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/david_website_styles/style.css" />
-    <link rel="stylesheet" href="styles/david_website_styles/musicNotes.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="container">
-        <ul>
-          <li><a href="#" id="settings">Settings</a></li>
-        </ul>
-      </div>
+    <nav class="navbar sidenav" id="mySidenav">
+      <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      > -->
+      <a
+        href="javascript:void(0)"
+        class="absolute top-0 right-0 mt-5 mr-10"
+        onclick="closeNav()"
+      >
+        <img src="images/settings.512x512.png" class="w-10 h-10"
+      /></a>
     </nav>
+
+    <div class="absolute left-[65%] right-0 top-14">
+      <img src="images/cactus1.png" class="w-24 h-24" />
+    </div>
+
+    <span onclick="openNav()" class="flex justify-end mt-5 mr-10">
+      <a href="#" id="settings">
+        <img src="images/settings.512x512.png" class="w-10 h-10"
+      /></a>
+    </span>
 
     <section>
       <div class="flex flex-col justify-center items-center text-[#014235]">
         <h1 class="text-8xl font-libre">Note Reading</h1>
         <h1 class="text-4xl italic font-lato">For Piano</h1>
+        <div id="score" class="text-xl pt-10">Score: 0/0</div>
       </div>
     </section>
 
     <section class="quiz">
-      <div class="flex flex-col justify-center items-center py-20">
+      <div class="flex flex-col justify-center items-center pb-20">
         <div class="quiz-question">
           <div
-            class="w-[950px] h-[550px] flex flex-col justify-center items-center relative"
+            class="w-[950px] h-[500px] flex flex-col justify-center items-center relative"
           >
-            <div
+            <!-- <div
               id="score"
-              class="absolute right-[50px] top-0 items-start z-10"
+              class="absolute right-[50px] top-0 items-start z-10 font-libre text-1xl text-[#014235]"
             >
               Score: 0/0
-            </div>
+            </div> -->
             <canvas
               id="staff-layer"
               width="950"
@@ -120,9 +135,9 @@
         </div>
       </div>
     </section>
-    <script src="scripts/david_website_scripts/constants.js"></script>
-    <script src="scripts/david_website_scripts/settings.js"></script>
-    <script src="scripts/david_website_scripts/canvas.js"></script>
-    <script src="scripts/david_website_scripts/questions.js"></script>
+    <script src="scripts/constants.js"></script>
+    <script src="scripts/settings.js"></script>
+    <script src="scripts/canvas.js"></script>
+    <script src="scripts/questions.js"></script>
   </body>
 </html>

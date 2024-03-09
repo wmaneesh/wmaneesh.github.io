@@ -1,5 +1,5 @@
-const wholeNoteUrl = "images/david_website_images/whole-note.svg";
-const fullLedger = "images/david_website_images/full_score.png";
+const wholeNoteUrl = "images/whole-note.svg";
+const fullLedger = "images/full_score.png";
 
 let staffLayer = document.getElementById("staff-layer");
 let staffCtx = staffLayer.getContext("2d");
@@ -11,7 +11,7 @@ const drawWholeNote = (posY) => {
   const image = new Image();
   image.src = wholeNoteUrl;
   image.onload = () => {
-    noteCtx.drawImage(image, 450, posY, 35, 27);
+    noteCtx.drawImage(image, 450, posY, 40, 27);
   };
 };
 
@@ -68,37 +68,37 @@ const drawBassNotes = (note, octave, needLedgerLine) => {
   switch (note) {
     //E
     case 0:
-      drawWholeNote(483.5  - octave * 97);
+      drawWholeNote(483.5 - octave * 97);
       if (needLedgerLine) {
         drawLedgerLine(497);
       }
       break;
     //F
     case 1:
-      drawWholeNote(470  - octave * 97);
+      drawWholeNote(470 - octave * 97);
       break;
     //G
     case 2:
-      drawWholeNote(456.5  - octave * 97);
+      drawWholeNote(456.5 - octave * 97);
       break;
     //A
     case 3:
-      drawWholeNote(443  - octave * 97);
+      drawWholeNote(443 - octave * 97);
       break;
     //B
     case 4:
-      drawWholeNote(429.5  - octave * 97);
+      drawWholeNote(429.5 - octave * 97);
       break;
     //C
     case 5:
-      drawWholeNote(416  - octave * 97);
+      drawWholeNote(416 - octave * 97);
       if (needLedgerLine) {
         drawLedgerLine(333);
       }
       break;
     //D
     case 6:
-      drawWholeNote(401.5  - octave * 97);
+      drawWholeNote(401.5 - octave * 97);
       break;
   }
 };
@@ -112,11 +112,11 @@ const drawFullLedgerLine = () => {
 };
 
 const clearCanvas = () => {
+  staffCtx.clearRect(0, 0, 950, 550);
   noteCtx.clearRect(0, 0, 950, 550);
 };
 
 drawFullLedgerLine();
-
 
 // const trebleImageUrl = "images/treble-clef.svg";
 // const bassImageUrl = "images/bass-clef.svg";
@@ -165,5 +165,3 @@ drawFullLedgerLine();
 //   staffCtx.lineTo(800, 180);
 //   staffCtx.stroke();
 // };
-
-

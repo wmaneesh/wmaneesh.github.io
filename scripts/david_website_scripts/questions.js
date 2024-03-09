@@ -15,12 +15,12 @@ const selectAnswer = (e) => {
   const isCorrect = JSON.parse(selectedBtn.dataset?.correct);
 
   if (isCorrect) {
-    selectedBtn.classList.add("bg-green-500");
+    selectedBtn.classList.add("text-[#668d85]");
     score++;
     setTimeout(resetState, 1000);
-    setTimeout(displayQuestion, 1000);
+    setTimeout(displayQuestion, 2300);
   } else {
-    selectedBtn.classList.add("bg-red-500");
+    selectedBtn.classList.add("text-black");
   }
 
   document.getElementById("score").innerHTML = `Score: ${score}/${tries}`;
@@ -46,8 +46,8 @@ window.addEventListener("keydown", (event) => {
 
 const displayQuestion = (isTreble) => {
   let noteIndex = getRandomInt(0, 26);
+  // let noteIndex = 25;
   console.log("note index: ", noteIndex);
-  // const noteIndex = 12;
 
   let noteType;
   let clefType = 0; //0 is treble
@@ -75,6 +75,7 @@ const displayQuestion = (isTreble) => {
     note = noteType[noteIndex];
   }
 
+  drawFullLedgerLine();
   if (clefType == 0) {
     drawBassNotes(note.value, octave, ledgerLIne);
   } else {
@@ -96,8 +97,8 @@ const displayQuestion = (isTreble) => {
 const resetState = () => {
   Array.from(answerButtonElement.children).forEach((el) => {
     el.dataset.correct = false;
-    el.classList.remove("bg-green-500");
-    el.classList.remove("bg-red-500");
+    el.classList.remove("text-black");
+    el.classList.remove("text-[#668d85]");
   });
 
   clearCanvas();
