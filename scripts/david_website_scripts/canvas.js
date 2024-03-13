@@ -1,5 +1,5 @@
-const wholeNoteUrl = "images/whole-note.svg";
-const fullLedger = "images/full_score.png";
+const wholeNoteUrl = "images/david_website_images/whole-note.svg";
+const fullLedger = "images/david_website_images/full_score.png";
 
 let staffLayer = document.getElementById("staff-layer");
 let staffCtx = staffLayer.getContext("2d");

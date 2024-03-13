@@ -21,7 +21,9 @@ const selectAnswer = (e) => {
     selectedBtn.classList.add("text-[#668d85]");
 
     //play audio for note
-    let audio = new Audio(`../audio/david_website_audio/Note ${selectedBtn.id}.mp3`);
+    let audio = new Audio(
+      `../audio/david_website_audio/Note ${selectedBtn.id}.mp3`
+    );
     audio.play();
 
     //reset canvas
@@ -56,7 +58,6 @@ const displayQuestion = (isTreble) => {
   //display buttons
   answerButtonElement.classList.remove("hidden");
 
-  
   let noteIndex = getRandomInt(0, 26);
   // let noteIndex = 25;
   console.log("note index: ", noteIndex);
