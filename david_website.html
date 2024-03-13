@@ -19,9 +19,6 @@
   </head>
   <body>
     <nav class="navbar sidenav" id="mySidenav">
-      <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-        >&times;</a
-      > -->
       <a
         href="javascript:void(0)"
         class="absolute top-0 right-0 mt-5 mr-10"
@@ -29,6 +26,12 @@
       >
         <img src="images/settings.512x512.png" class="w-10 h-10"
       /></a>
+      <ul>
+        <li>
+          Lower Bound <button>Low_Note</button> :
+          <button>High_Note</button> Higher Bound
+        </li>
+      </ul>
     </nav>
 
     <div class="absolute left-[65%] right-0 top-14">
@@ -45,7 +48,7 @@
       <div class="flex flex-col justify-center items-center text-[#014235]">
         <h1 class="text-8xl font-libre">Note Reading</h1>
         <h1 class="text-4xl italic font-lato">For Piano</h1>
-        <div id="score" class="text-xl pt-10">Score: 0/0</div>
+        <div id="score" class="text-xl pt-10 z-10">Score: 0/0</div>
       </div>
     </section>
 
@@ -64,19 +67,19 @@
             <canvas
               id="staff-layer"
               width="950"
-              height="500"
+              height="550"
               class="absolute z-0"
             ></canvas>
             <canvas
               id="note-layer"
               width="950"
-              height="500"
+              height="550"
               class="absolute z-10"
             ></canvas>
           </div>
         </div>
         <div
-          class="flex justify-between flex-col [&_button]:w-16 [&_button]:m-3"
+          class="flex justify-between flex-col [&_button]:w-16 [&_button]:m-3 mt-6"
         >
           <div
             id="option-buttons"

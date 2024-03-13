@@ -14,9 +14,17 @@ const selectAnswer = (e) => {
   const selectedBtn = e.target;
   const isCorrect = JSON.parse(selectedBtn.dataset?.correct);
 
+  console.log(`${selectedBtn.id}-mp3`);
+
   if (isCorrect) {
-    selectedBtn.classList.add("text-[#668d85]");
     score++;
+    selectedBtn.classList.add("text-[#668d85]");
+
+    //play audio for note
+    let audio = new Audio(`../audio/david_website_audio/Note ${selectedBtn.id}.mp3`);
+    audio.play();
+
+    //reset canvas
     setTimeout(resetState, 1000);
     setTimeout(displayQuestion, 2300);
   } else {
@@ -45,6 +53,10 @@ window.addEventListener("keydown", (event) => {
 });
 
 const displayQuestion = (isTreble) => {
+  //display buttons
+  answerButtonElement.classList.remove("hidden");
+
+  
   let noteIndex = getRandomInt(0, 26);
   // let noteIndex = 25;
   console.log("note index: ", noteIndex);
@@ -101,6 +113,7 @@ const resetState = () => {
     el.classList.remove("text-[#668d85]");
   });
 
+  answerButtonElement.classList.add("hidden");
   clearCanvas();
 };
 
