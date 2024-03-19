@@ -11,14 +11,14 @@ const drawWholeNote = (posY) => {
   const image = new Image();
   image.src = wholeNoteUrl;
   image.onload = () => {
-    noteCtx.drawImage(image, 450, posY, 40, 27);
+    noteCtx.drawImage(image, 450, posY, 30, 20);
   };
 };
 
 const drawLedgerLine = (postY) => {
   noteCtx.moveTo(430, postY);
   noteCtx.lineTo(500, postY);
-  noteCtx.lineWidth = 3;
+  noteCtx.lineWidth = 2;
   noteCtx.stroke();
 };
 
@@ -26,40 +26,40 @@ const drawTrebleNotes = (note, octave, needLedgerLine) => {
   switch (note) {
     //middleC
     case 0:
-      drawWholeNote(262 - octave * 96);
+      drawWholeNote(174 - octave * 64);
       if (needLedgerLine) {
-        drawLedgerLine(276);
+        drawLedgerLine(185);
       }
       break;
     //D
     case 1:
-      drawWholeNote(248.5 - octave * 96);
+      drawWholeNote(165 - octave * 64);
       if (needLedgerLine) {
         drawLedgerLine(276);
       }
       break;
     //E
     case 2:
-      drawWholeNote(235 - octave * 96);
+      drawWholeNote(155 - octave * 64);
       break;
     //F
     case 3:
-      drawWholeNote(221.5 - octave * 96);
+      drawWholeNote(146 - octave * 64);
       break;
     //G
     case 4:
-      drawWholeNote(208 - octave * 96);
+      drawWholeNote(137 - octave * 64);
       break;
     //A
     case 5:
-      drawWholeNote(194.5 - octave * 96);
+      drawWholeNote(128 - octave * 64);
       if (needLedgerLine) {
-        drawLedgerLine(112);
+        drawLedgerLine(75);
       }
       break;
     //B
     case 6:
-      drawWholeNote(180 - octave * 96);
+      drawWholeNote(119 - octave * 64);
       break;
   }
 };
@@ -68,37 +68,37 @@ const drawBassNotes = (note, octave, needLedgerLine) => {
   switch (note) {
     //E
     case 0:
-      drawWholeNote(483.5 - octave * 97);
+      drawWholeNote(320 - octave * 64);
       if (needLedgerLine) {
-        drawLedgerLine(497);
+        drawLedgerLine(330);
       }
       break;
     //F
     case 1:
-      drawWholeNote(470 - octave * 97);
+      drawWholeNote(312 - octave * 64);
       break;
     //G
     case 2:
-      drawWholeNote(456.5 - octave * 97);
+      drawWholeNote(303 - octave * 64);
       break;
     //A
     case 3:
-      drawWholeNote(443 - octave * 97);
+      drawWholeNote(294 - octave * 64);
       break;
     //B
     case 4:
-      drawWholeNote(429.5 - octave * 97);
+      drawWholeNote(285 - octave * 64);
       break;
     //C
     case 5:
-      drawWholeNote(416 - octave * 97);
+      drawWholeNote(276 - octave * 64);
       if (needLedgerLine) {
-        drawLedgerLine(333);
+        drawLedgerLine(222);
       }
       break;
     //D
     case 6:
-      drawWholeNote(401.5 - octave * 97);
+      drawWholeNote(267 - octave * 64);
       break;
   }
 };
@@ -107,7 +107,7 @@ const drawFullLedgerLine = () => {
   const image = new Image();
   image.src = fullLedger;
   image.onload = () => {
-    staffCtx.drawImage(image, 0, 0, 950, 600);
+    staffCtx.drawImage(image, 150, 0, 650, 400);
   };
 };
 

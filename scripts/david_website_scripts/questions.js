@@ -14,8 +14,6 @@ const selectAnswer = (e) => {
   const selectedBtn = e.target;
   const isCorrect = JSON.parse(selectedBtn.dataset?.correct);
 
-  console.log(`${selectedBtn.id}-mp3`);
-
   if (isCorrect) {
     score++;
     selectedBtn.classList.add("text-[#668d85]");
@@ -33,7 +31,7 @@ const selectAnswer = (e) => {
     selectedBtn.classList.add("text-black");
   }
 
-  document.getElementById("score").innerHTML = `Score: ${score}/${tries}`;
+  document.getElementById("score").innerHTML = `${score}/${tries}`;
 };
 
 window.addEventListener("keydown", (event) => {
@@ -59,7 +57,7 @@ const displayQuestion = (isTreble) => {
   answerButtonElement.classList.remove("hidden");
 
   let noteIndex = getRandomInt(0, 26);
-  // let noteIndex = 25;
+  // let noteIndex = 27;
   console.log("note index: ", noteIndex);
 
   let noteType;

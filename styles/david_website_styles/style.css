@@ -67,3 +67,11 @@ body {
     font-size: 18px;
   }
 }
+
+#title::before {
+  content: "";
+  position: absolute;
+  border-bottom: 4px solid black; /*use this to adjust underlin color and size*/
+  width: 100%; /*use this to adjust underline width*/
+  height: 1.2em; /*use this to adjust underline position*/
+}
