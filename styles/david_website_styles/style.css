@@ -75,3 +75,10 @@ body {
   width: 100%; /*use this to adjust underline width*/
   height: 1.2em; /*use this to adjust underline position*/
 }
+
+
+#score {
+  position: absolute;
+  transform: translateX(30rem);
+}
+
