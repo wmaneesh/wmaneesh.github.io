@@ -82,3 +82,9 @@ body {
   transform: translateX(30rem);
 }
 
+#cactus {
+  position: absolute;
+  transform: translate(32rem, 6rem);
+}
+
+
