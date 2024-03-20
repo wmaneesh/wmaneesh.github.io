@@ -9,7 +9,7 @@ const getRandomInt = (min, max) => {
 };
 
 const selectAnswer = (e) => {
-  console.log(e.target.id);
+  // console.log(e.target.id);
   tries++;
   const selectedBtn = e.target;
   const isCorrect = JSON.parse(selectedBtn.dataset?.correct);
@@ -60,12 +60,12 @@ const displayQuestion = (lower, upper) => {
   answerButtonElement.classList.remove("hidden");
   quizContainer.setAttribute("closing", "false");
 
-  console.log("lower: ", lower);
-  console.log("upper: ", upper);
+  // console.log("lower: ", lower);
+  // console.log("upper: ", upper);
 
   let noteIndex = getRandomInt(parseInt(lower), parseInt(upper));
   // let noteIndex = 25;
-  console.log("note index: ", noteIndex);
+  // console.log("note index: ", noteIndex);
 
   let noteType;
   let clefType = 0; //0 is treble
@@ -77,7 +77,7 @@ const displayQuestion = (lower, upper) => {
     clefType = 1;
   }
 
-  console.log("note index Updated: ", noteIndex);
+  // console.log("note index Updated: ", noteIndex);
 
   let note;
   let ledgerLIne = false;
@@ -103,12 +103,12 @@ const displayQuestion = (lower, upper) => {
     drawTrebleNotes(note.value, octave, ledgerLIne);
   }
 
-  console.log("note name: ", note.name);
+  // console.log("note name: ", note.name);
   const correctButton = Array.from(answerButtonElement.children).find(
     (el) => el.id === note.name
   );
 
-  console.log("correct Button: ", answerButtonElement.children);
+  // console.log("correct Button: ", answerButtonElement.children);
 
   correctButton.dataset.correct = true;
 

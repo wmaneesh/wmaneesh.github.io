@@ -16,7 +16,6 @@ const drawWholeNoteRange = (posX, posY) => {
 };
 
 const drawLedgerLineRange = (posX, posY) => {
-  console.log("TALKIGN TO NOTE", posX, posY);
   noteCtxRange.beginPath();
   noteCtxRange.moveTo(posX - 15, posY);
   noteCtxRange.lineTo(posX + 30, posY);
@@ -67,11 +66,9 @@ const drawTrebleNotesRange = (note, octave, needLedgerLine, posX) => {
 };
 
 const drawBassNotesRange = (note, octave, needLedgerLine, posX) => {
-  console.log(note, octave, needLedgerLine, posX);
   switch (note) {
     //E
     case 0:
-      console.log("im here");
       drawWholeNoteRange(posX, 230 - octave * 48.5);
       if (needLedgerLine) {
         drawLedgerLineRange(posX, 237);
@@ -110,7 +107,6 @@ const drawBassNotesRange = (note, octave, needLedgerLine, posX) => {
 const drawFullLedgerLineRange = () => {
   const image = new Image();
   image.src = fullLedgerRange;
-  console.log("TALKIGN TO RANGE");
   image.onload = () => {
     staffCtxRange.drawImage(image, 15, 25, 200, 200);
   };
@@ -124,21 +120,21 @@ const lowerBounderUp = (event, currentUpperBoundValue, lowerRange) => {
   const buttonValue = event.target.value;
 
   if (buttonValue === "25") {
-    console.log("move up", event.target.value);
+    // console.log("move up", event.target.value);
     lowerBoundUpButton.disabled = true;
   } else if (buttonValue === currentUpperBoundValue) {
-    console.log("move up", event.target.value);
+    // console.log("move up", event.target.value);
     lowerBoundUpButton.disabled = true;
   } else {
     const newButtonValue = parseInt(buttonValue) + 1;
     lowerBoundUpButton.value = newButtonValue;
     lowerBoundDownButton.value = newButtonValue;
-    console.log("move up", newButtonValue);
+    // console.log("move up", newButtonValue);
 
     moveNotesOnRange(newButtonValue, lowerRange);
   }
 
-  console.log("new button value", lowerBoundUpButton.value);
+//   console.log("new button value", lowerBoundUpButton.value);
 
   return lowerBoundUpButton.value;
 };
@@ -147,17 +143,17 @@ const lowerBoundDown = (event, lowerRange) => {
   const buttonValue = event.target.value;
 
   if (buttonValue === "0") {
-    console.log("move up", event.target.value);
+    // console.log("move up", event.target.value);
     lowerBoundDownButton.disabled = true;
   } else {
     const newButtonValue = parseInt(buttonValue) - 1;
     lowerBoundUpButton.value = newButtonValue;
     lowerBoundDownButton.value = newButtonValue;
-    console.log("move up", newButtonValue);
+    // console.log("move up", newButtonValue);
 
     moveNotesOnRange(newButtonValue, lowerRange);
   }
-  console.log("new button value", lowerBoundUpButton.value);
+//   console.log("new button value", lowerBoundUpButton.value);
   return lowerBoundDownButton.value;
 };
 
@@ -165,18 +161,18 @@ const upperBoundUp = (event, lowerRange) => {
   const buttonValue = event.target.value;
 
   if (buttonValue === "25") {
-    console.log("move up", event.target.value);
+    // console.log("move up", event.target.value);
     upperBounderUpButton.disabled = true;
   } else {
     const newButtonValue = parseInt(buttonValue) + 1;
     upperBounderUpButton.value = newButtonValue;
     upperBoundDownButton.value = newButtonValue;
-    console.log("move up", newButtonValue);
+    // console.log("move up", newButtonValue);
 
     moveNotesOnRange(newButtonValue, lowerRange);
   }
 
-  console.log("new button value", upperBounderUpButton.value);
+//   console.log("new button value", upperBounderUpButton.value);
 
   return upperBounderUpButton.value;
 };
@@ -185,16 +181,16 @@ const upperBoundDown = (event, currentLowerBoundValue, lowerRange) => {
   const buttonValue = event.target.value;
 
   if (buttonValue === "0") {
-    console.log("move up", event.target.value);
+    // console.log("move up", event.target.value);
     upperBoundDownButton.disabled = true;
   } else if (buttonValue === currentLowerBoundValue) {
-    console.log("move up", event.target.value);
+    // console.log("move up", event.target.value);
     lowerBoundUpButton.disabled = true;
   } else {
     const newButtonValue = parseInt(buttonValue) - 1;
     upperBounderUpButton.value = newButtonValue;
     upperBoundDownButton.value = newButtonValue;
-    console.log("move up", newButtonValue);
+    // console.log("move up", newButtonValue);
 
     moveNotesOnRange(newButtonValue, lowerRange);
   }

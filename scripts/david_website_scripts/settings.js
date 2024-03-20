@@ -12,28 +12,28 @@ const MutationObserver =
   window.MozMutationObserver;
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
-function openNav() {
+const openNav = () => {
   document.getElementById("mySidenav").style.width = "375px";
-}
+};
 
 document.getElementById("mySidenav").style.width = "375px";
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-function closeNav() {
+const closeNav = () => {
   document.getElementById("mySidenav").style.width = "0";
-}
+};
 
 var slideObserver = new MutationObserver(function (mutations) {
-  mutations.forEach(function (mutation) {
-    if (mutation.type == "attributes") {
-      // here you can play with it now :)
-      if (mutation.target.getAttribute("closing") == "true") {
-        console.log("ok. closing is true");
-      } else {
-        console.log(":s closing is false");
-      }
-    }
-  });
+  // mutations.forEach(function (mutation) {
+  //   if (mutation.type == "attributes") {
+  //     // here you can play with it now :)
+  //     // if (mutation.target.getAttribute("closing") == "true") {
+  //     //   console.log("ok. closing is true");
+  //     // } else {
+  //     //   console.log(":s closing is false");
+  //     // }
+  //   }
+  // });
 });
 
 slideObserver.observe(quizContainer, {
