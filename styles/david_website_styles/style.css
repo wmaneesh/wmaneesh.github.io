@@ -9,12 +9,6 @@ body {
   height: 100vh;
 }
 
-.quizContainer {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .font-libre {
   font-family: "Libre Baskerville";
 }
@@ -76,7 +70,6 @@ body {
   height: 1.2em; /*use this to adjust underline position*/
 }
 
-
 #score {
   position: absolute;
   transform: translateX(30rem);
@@ -87,4 +80,37 @@ body {
   transform: translate(32rem, 6rem);
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#quizContainer[closing="true"] {
+  display: block;
+  inset: 0;
+  animation: fade-out 1500ms forwards;
+}
+
+#quizContainer[closing="false"] {
+  animation: fade-in 1500ms forwards;
+}
 

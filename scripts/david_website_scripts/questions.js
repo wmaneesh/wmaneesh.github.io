@@ -20,13 +20,13 @@ const selectAnswer = (e) => {
 
     //play audio for note
     let audio = new Audio(
-      `../audio/david_website_audio/Note ${selectedBtn.id}.mp3`
+      `../audio/david_website_audio/Note ${selectedBtn.id}${getRandomInt(1, 3)}.mp3`
     );
     audio.play();
 
     //reset canvas
-    setTimeout(resetState, 1000);
-    setTimeout(displayQuestion, 2300);
+    quizContainer.setAttribute("closing", "true");
+    setTimeout(resetState, 2000);
   } else {
     selectedBtn.classList.add("text-black");
   }
@@ -52,9 +52,10 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
-const displayQuestion = (isTreble) => {
+const displayQuestion = () => {
   //display buttons
   answerButtonElement.classList.remove("hidden");
+  quizContainer.setAttribute("closing", "false");
 
   let noteIndex = getRandomInt(0, 26);
   // let noteIndex = 27;
@@ -86,6 +87,8 @@ const displayQuestion = (isTreble) => {
     note = noteType[noteIndex];
   }
 
+  //add fade in effect before displaying
+  quizContainer.setAttribute("closing", "false");
   drawFullLedgerLine();
   if (clefType == 0) {
     drawBassNotes(note.value, octave, ledgerLIne);
@@ -114,7 +117,9 @@ const resetState = () => {
 
   answerButtonElement.classList.add("hidden");
   clearCanvas();
+  displayQuestion();
+  // setTimeout(displayQuestion, 1500);
 };
 
 resetState();
-displayQuestion();
+// displayQuestion();

@@ -116,7 +116,9 @@ const clearCanvas = () => {
   noteCtx.clearRect(0, 0, 950, 550);
 };
 
-drawFullLedgerLine();
+
+
+// drawFullLedgerLine();
 
 // const trebleImageUrl = "images/treble-clef.svg";
 // const bassImageUrl = "images/bass-clef.svg";
