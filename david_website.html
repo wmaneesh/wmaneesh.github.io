@@ -60,8 +60,14 @@
     </nav>
 
     <div class="relative flex w-full justify-center">
-      <div id="cactus">
-        <img src="images/david_website_images/cactus1.png" class="w-28 h-28" />
+      <div
+        id="cactus"
+        class="absolute lg:translate-x-[32rem] lg:translate-y-[6rem] md:translate-x-[20rem] md:translate-y-[4.5rem]"
+      >
+        <img
+          src="images/david_website_images/cactus1.png"
+          class="lg:w-28 lg:h-28 md:w-20 md:h-20"
+        />
       </div>
     </div>
 
@@ -76,14 +82,21 @@
     <div class="flex flex-col justify-center items-center text-[#014235]">
       <div class="w-full flex justify-center">
         <h1
-          class="w-full text-center text-[8rem] font-libre relative overflow-x-hidden"
+          class="w-full text-center lg:text-[8em] md:text-[5em] font-libre relative overflow-x-hidden"
         >
           Note <span id="title">Reading</span>
         </h1>
       </div>
       <div class="relative mt-[-1rem] flex w-full justify-center">
-        <h1 class="text-4xl italic font-lato">For Piano</h1>
-        <div id="score" class="text-xl">0/0</div>
+        <h1 class="lg:text-[2.25em] md:text-[1em] italic font-lato">
+          For Piano
+        </h1>
+        <div
+          id="score"
+          class="absolute lg:text-[2.25em] md:text-[1em] lg:translate-x-[30rem] md:translate-x-[18rem]"
+        >
+          0/0
+        </div>
       </div>
     </div>
 
@@ -93,12 +106,6 @@
           <div
             class="w-[950px] h-[400px] flex flex-col justify-center items-center relative my-20"
           >
-            <!-- <div
-              id="score"
-              class="absolute right-[50px] top-0 items-start z-10 font-libre text-1xl text-[#014235]"
-            >
-              Score: 0/0
-            </div> -->
             <canvas
               id="staff-layer"
               width="950"
@@ -114,11 +121,11 @@
           </div>
         </div>
         <div
-          class="flex justify-between flex-col [&_button]:w-28 [&_button]:m-3"
+          class="flex justify-between flex-col lg:[&_button]:w-28 md:[&_button]:w-24 lg:[&_button]:m-3 md:[&_button]:m-0"
         >
           <div
             id="option-buttons"
-            class="neutral font-libre text-5xl text-[#014235]"
+            class="neutral font-libre lg:text-[3em] md:text-[1.5em] text-[#014235]"
           >
             <button
               type="button"
