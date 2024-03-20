@@ -16,6 +16,7 @@ const drawWholeNote = (posY) => {
 };
 
 const drawLedgerLine = (postY) => {
+  noteCtx.beginPath();
   noteCtx.moveTo(430, postY);
   noteCtx.lineTo(500, postY);
   noteCtx.lineWidth = 2;
@@ -115,8 +116,6 @@ const clearCanvas = () => {
   staffCtx.clearRect(0, 0, 950, 550);
   noteCtx.clearRect(0, 0, 950, 550);
 };
-
-
 
 // drawFullLedgerLine();
 

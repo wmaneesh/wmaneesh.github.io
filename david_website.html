@@ -28,12 +28,35 @@
           src="images/david_website_images/settings.512x512.png"
           class="w-10 h-10"
       /></a>
-      <ul>
-        <li>
-          Lower Bound <button>Low_Note</button> :
-          <button>High_Note</button> Higher Bound
-        </li>
-      </ul>
+      <div
+        class="w-[350px] h-[275px] flex flex-row justify-around items-center relative mx-5 my-20 bg-yellow-50"
+      >
+        <div class="w-[30px] h-auto flex flex-col">
+          <button id="lowerUp" value="0" class="uiw--caret-up"></button>
+          <button id="lowerDown" value="0" class="uiw--caret-down">Down</button>
+        </div>
+
+        <div class="w-[225px] h-[250px]">
+          <canvas
+            id="rangeStaff"
+            width="250"
+            height="250"
+            class="absolute z-10"
+          ></canvas>
+          <canvas
+            id="rangeNote"
+            width="250"
+            height="250"
+            class="absolute z-20"
+          ></canvas>
+        </div>
+        <div class="w-[30px] h-auto flex flex-col">
+          <button id="upperUp" value="25" class="uiw--caret-up">Up</button>
+          <button id="upperDown" value="25" class="uiw--caret-down">
+            Down
+          </button>
+        </div>
+      </div>
     </nav>
 
     <div class="relative flex w-full justify-center">
@@ -153,6 +176,7 @@
     <script src="scripts/david_website_scripts/constants.js"></script>
     <script src="scripts/david_website_scripts/settings.js"></script>
     <script src="scripts/david_website_scripts/canvas.js"></script>
+    <script src="scripts/david_website_scripts/rangeCanvas.js"></script>
     <script src="scripts/david_website_scripts/questions.js"></script>
   </body>
 </html>
