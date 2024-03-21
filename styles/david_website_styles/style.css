@@ -83,11 +83,11 @@ body {
 #quizContainer[closing="true"] {
   display: block;
   inset: 0;
-  animation: fade-out 1500ms forwards;
+  animation: fade-out 1250ms forwards;
 }
 
 #quizContainer[closing="false"] {
-  animation: fade-in 1500ms forwards;
+  animation: fade-in 1250ms forwards;
 }
 
 .uiw--caret-up {
