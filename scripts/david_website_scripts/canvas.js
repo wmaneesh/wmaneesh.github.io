@@ -49,8 +49,14 @@ const drawWholeNote = (posY) => {
 const drawLedgerLine = (postY) => {
   const posX = noteLayer.offsetWidth / 2;
   noteCtx.beginPath();
-  noteCtx.moveTo(posX - 20, postY);
-  noteCtx.lineTo(posX + 45, postY);
+  noteCtx.moveTo(
+    posX - 20 * (noteLayer.offsetHeight / 400),
+    postY * (noteLayer.offsetHeight / 400)
+  );
+  noteCtx.lineTo(
+    posX + 45 * (noteLayer.offsetHeight / 400),
+    postY * (noteLayer.offsetHeight / 400)
+  );
   noteCtx.lineWidth = 2;
   noteCtx.stroke();
 };
