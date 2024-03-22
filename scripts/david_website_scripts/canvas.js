@@ -4,21 +4,53 @@ const fullLedger = "images/david_website_images/full_score.png";
 let staffLayer = document.getElementById("staff-layer");
 let staffCtx = staffLayer.getContext("2d");
 
+fitToContainer(staffLayer);
+
 let noteLayer = document.getElementById("note-layer");
 let noteCtx = noteLayer.getContext("2d");
 
+function fitToContainer(canvas) {
+  canvas.style.width = "100%";
+  canvas.style.height = "100%";
+  canvas.width = canvas.offsetWidth;
+  canvas.height = canvas.offsetHeight;
+}
+
+const drawFullLedgerLine = () => {
+  const image = new Image();
+  image.src = fullLedger;
+  const canvasWidth = staffLayer.width;
+  const canvasHeight = staffLayer.height;
+  console.log(canvasWidth);
+  console.log(canvasHeight);
+  image.onload = () => {
+    // staffCtx.drawImage(image, 0, 0, 650, 400);
+    staffCtx.drawImage(image, 0, 0, canvasWidth, canvasHeight);
+  };
+};
+
 const drawWholeNote = (posY) => {
+  fitToContainer(noteLayer);
+
   const image = new Image();
   image.src = wholeNoteUrl;
+  const posX = noteLayer.offsetWidth / 2;
   image.onload = () => {
-    noteCtx.drawImage(image, 450, posY, 30, 20);
+    noteCtx.drawImage(
+      image,
+      posX,
+      posY * (noteLayer.offsetHeight / 400),
+      30 * (noteLayer.offsetHeight / 400),
+      20 * (noteLayer.offsetHeight / 400)
+    );
   };
 };
 
 const drawLedgerLine = (postY) => {
+  const posX = noteLayer.offsetWidth / 2;
   noteCtx.beginPath();
-  noteCtx.moveTo(430, postY);
-  noteCtx.lineTo(500, postY);
+  noteCtx.moveTo(posX - 20, postY);
+  noteCtx.lineTo(posX + 45, postY);
   noteCtx.lineWidth = 2;
   noteCtx.stroke();
 };
@@ -104,65 +136,7 @@ const drawBassNotes = (note, octave, needLedgerLine) => {
   }
 };
 
-const drawFullLedgerLine = () => {
-  const image = new Image();
-  image.src = fullLedger;
-  image.onload = () => {
-    staffCtx.drawImage(image, 150, 0, 650, 400);
-  };
-};
-
 const clearCanvas = () => {
   staffCtx.clearRect(0, 0, 950, 550);
   noteCtx.clearRect(0, 0, 950, 550);
 };
-
-// drawFullLedgerLine();
-
-// const trebleImageUrl = "images/treble-clef.svg";
-// const bassImageUrl = "images/bass-clef.svg";
-
-// const drawTrebleClef = () => {
-//   const image = new Image();
-//   image.src = trebleImageUrl;
-//   image.onload = () => {
-//     noteCtx.drawImage(image, 25, 19, 210, 210);
-//   };
-// };
-
-// const drawBassClef = () => {
-//   const image = new Image();
-//   image.src = bassImageUrl;
-//   image.onload = () => {
-//     noteCtx.drawImage(image, 100, 15, 100, 200);
-//   };
-// };
-
-//increment by 30 to go to each space starting from 60 (E)
-//increment by 30 to go to each line starting from 75 (D)
-// const drawStaff = () => {
-//   staffCtx.beginPath();
-//   staffCtx.moveTo(0, 60);
-//   staffCtx.lineTo(800, 60);
-//   staffCtx.stroke();
-
-//   staffCtx.moveTo(0, 90);
-//   staffCtx.lineTo(800, 90);
-//   staffCtx.stroke();
-
-//   staffCtx.moveTo(0, 120);
-//   staffCtx.lineTo(800, 120);
-//   staffCtx.stroke();
-
-//   staffCtx.moveTo(0, 150);
-//   staffCtx.lineTo(800, 150);
-//   staffCtx.stroke();
-
-//   staffCtx.moveTo(0, 180);
-//   staffCtx.lineTo(800, 180);
-//   staffCtx.stroke();
-
-//   staffCtx.moveTo(0, 180);
-//   staffCtx.lineTo(800, 180);
-//   staffCtx.stroke();
-// };

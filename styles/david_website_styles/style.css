@@ -47,13 +47,13 @@ body {
   }
 }
 
-#title::before {
+/* #title::before {
   content: "";
   position: absolute;
-  border-bottom: 4px solid black; /*use this to adjust underlin color and size*/
-  width: 100%; /*use this to adjust underline width*/
-  height: 1.2em; /*use this to adjust underline position*/
-}
+  border-bottom: 4px solid black; 
+  width: 100%; 
+  height: 1.2em; 
+} */
 
 
 @keyframes fade-in {

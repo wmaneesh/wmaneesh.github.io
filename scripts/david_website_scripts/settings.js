@@ -41,11 +41,11 @@ slideObserver.observe(quizContainer, {
   attributeFilter: ["closing"], // filter your attributes
 });
 
-function changeAriaHiddenRole(element, boolean) {
+const changeAriaHiddenRole = (element, boolean) => {
   element.setAttribute("closing", boolean);
 }
 
-function toggleAriaHiddenRole(boolean) {
+const toggleAriaHiddenRole = () => {
   if (quizContainer.getAttribute("closing") === "true") {
     changeAriaHiddenRole(quizContainer, true);
   } else {

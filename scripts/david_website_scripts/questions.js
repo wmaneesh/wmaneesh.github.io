@@ -64,7 +64,7 @@ const displayQuestion = (lower, upper) => {
   // console.log("upper: ", upper);
 
   let noteIndex = getRandomInt(parseInt(lower), parseInt(upper));
-  // let noteIndex = 25;
+  // let noteIndex = 13;
   // console.log("note index: ", noteIndex);
 
   let noteType;
