@@ -74,51 +74,53 @@
       </div>
     </nav>
 
-    <div class="relative flex w-full justify-center">
-      <div
-        id="cactus"
-        class="absolute lg:translate-x-[20em] lg:translate-y-[5.8em] md:translate-x-[16em] md:translate-y-[6.6em] translate-x-[10rem] translate-y-[6em]"
-      >
-        <img
-          src="images/david_website_images/cactus1.png"
-          class="lg:w-24 lg:h-24 md:w-16 md:h-16 w-12 h-12"
-        />
-      </div>
-    </div>
-
     <span onclick="openNav()" class="absolute right-0 pt-14 pr-10">
       <a href="#" id="settings">
         <span class="md:w-10 md:h-10 w-8 h-8 iconamoon--settings-fill"></span>
       </a>
     </span>
 
-    <div class="flex flex-col justify-start items-center text-[#014235] pt-24">
-      <div class="w-full flex justify-center">
-        <h1
-          class="w-full text-center lg:text-[5em] md:text-[4em] text-[2.5em] font-libre relative overflow-x-hidden"
-        >
-          Note
-          <span
-            id="title"
-            class="before:w-full before:h-[1.2em] before:absolute before:content-[''] before:-z-10 lg:before:border-b-[3px] md:before:border-b-[2px] before:border-b-[1px] before:border-solid before:border-black"
-            >Reading</span
-          >
-        </h1>
-      </div>
-      <div class="relative mt-[-1rem] flex w-full justify-center">
-        <h1 class="lg:text-[1.5em] md:text-[1em] italic font-lato">
-          For Piano
-        </h1>
+    <section id="quizContainer" closing="false">
+      <div class="relative flex w-full justify-center">
         <div
-          id="score"
-          class="absolute lg:text-[1.5em] md:text-[1em] lg:translate-x-[12em] md:translate-x-[14.5rem] translate-x-[9.3em]"
+          id="cactus"
+          class="absolute lg:translate-x-[20em] lg:translate-y-[5.8em] md:translate-x-[16em] md:translate-y-[6.6em] translate-x-[10rem] translate-y-[6em] -z-0"
         >
-          0/0
+          <img
+            src="images/david_website_images/cactus1.png"
+            class="lg:w-24 lg:h-24 md:w-16 md:h-16 w-12 h-12"
+          />
         </div>
       </div>
-    </div>
 
-    <section id="quizContainer" closing="false">
+      <div
+        class="flex flex-col justify-start items-center text-[#014235] pt-24"
+      >
+        <div class="w-full flex justify-center">
+          <h1
+            class="w-full text-center lg:text-[5em] md:text-[4em] text-[2.5em] font-libre relative overflow-x-hidden"
+          >
+            Note
+            <span
+              id="title"
+              class="before:w-full before:h-[1.2em] before:absolute before:content-[''] before:-z-10 lg:before:border-b-[3px] md:before:border-b-[2px] before:border-b-[1px] before:border-solid before:border-black"
+              >Reading</span
+            >
+          </h1>
+        </div>
+        <div class="relative mt-[-1rem] flex w-full justify-center">
+          <h1 class="lg:text-[1.5em] md:text-[1em] italic font-lato">
+            For Piano
+          </h1>
+          <div
+            id="score"
+            class="absolute lg:text-[1.5em] md:text-[1em] lg:translate-x-[12em] md:translate-x-[14.5rem] translate-x-[9.3em]"
+          >
+            0/0
+          </div>
+        </div>
+      </div>
+
       <div class="flex flex-col justify-center items-center content-start">
         <div class="quiz-question">
           <div
