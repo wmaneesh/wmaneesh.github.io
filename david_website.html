@@ -19,10 +19,17 @@
   </head>
   <body>
     <div id="backgroundTrack">
+      <iframe
+        src="audio/david_website_audio/Background Strings.mp3"
+        allow="autoplay"
+        id="audio"
+        style="display: none"
+      ></iframe>
+
       <audio autoplay hidden loop>
         <source
           src="audio/david_website_audio/Background Strings.mp3"
-          type="audio/mpeg"
+          type="audio/mp3"
         />
         If you're reading this, audio isn't supported.
       </audio>
@@ -93,7 +100,7 @@
           Note
           <span
             id="title"
-            class="before:w-full before:h-[1.2em] before:absolute before:content-[''] lg:before:border-b-4 md:before:border-b-[3px] before:border-b-[2px] before:border-solid before:border-black"
+            class="before:w-full before:h-[1.2em] before:absolute before:content-[''] before:-z-10 lg:before:border-b-[3px] md:before:border-b-[2px] before:border-b-[1px] before:border-solid before:border-black"
             >Reading</span
           >
         </h1>
