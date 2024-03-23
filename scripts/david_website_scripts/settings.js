@@ -14,6 +14,7 @@ const MutationObserver =
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 const openNav = () => {
   document.getElementById("mySidenav").style.width = "375px";
+  document.getElementById("openNavButton").style.display = "none";
 };
 
 // document.getElementById("mySidenav").style.width = "375px";
@@ -21,6 +22,7 @@ const openNav = () => {
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
 const closeNav = () => {
   document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("openNavButton").style.display = "inline";
 };
 
 var slideObserver = new MutationObserver(function (mutations) {
@@ -43,7 +45,7 @@ slideObserver.observe(quizContainer, {
 
 const changeAriaHiddenRole = (element, boolean) => {
   element.setAttribute("closing", boolean);
-}
+};
 
 const toggleAriaHiddenRole = () => {
   if (quizContainer.getAttribute("closing") === "true") {
@@ -51,7 +53,7 @@ const toggleAriaHiddenRole = () => {
   } else {
     changeAriaHiddenRole(quizContainer, false);
   }
-}
+};
 
 let lower = 0;
 let upper = 25;

@@ -37,8 +37,9 @@
 
     <nav class="navbar sidenav" id="mySidenav">
       <a
+        id="closeNavButton"
         href="javascript:void(0)"
-        class="absolute right-0 pt-14 pr-10"
+        class="absolute right-0 pt-14 pr-10 z-30"
         onclick="closeNav()"
       >
         <span class="iconamoon--settings-light md:w-10 md:h-10 w-8 h-8"></span
@@ -74,7 +75,11 @@
       </div>
     </nav>
 
-    <span onclick="openNav()" class="absolute right-0 pt-14 pr-10">
+    <span
+      onclick="openNav()"
+      id="openNavButton"
+      class="absolute right-0 pt-14 pr-10 z-20"
+    >
       <a href="#" id="settings">
         <span class="md:w-10 md:h-10 w-8 h-8 iconamoon--settings-fill"></span>
       </a>
@@ -84,7 +89,7 @@
       <div class="relative flex w-full justify-center">
         <div
           id="cactus"
-          class="absolute lg:translate-x-[20em] lg:translate-y-[5.8em] md:translate-x-[16em] md:translate-y-[6.6em] translate-x-[10rem] translate-y-[6em] -z-0"
+          class="absolute lg:translate-x-[20em] lg:translate-y-[5.8em] md:translate-x-[16em] md:translate-y-[6.6em] translate-x-[10rem] translate-y-[6em]"
         >
           <img
             src="images/david_website_images/cactus1.png"
