@@ -13,7 +13,10 @@ const MutationObserver =
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 const openNav = () => {
-  document.getElementById("mySidenav").style.width = "375px";
+  // document.getElementById("mySidenav").style.width = "375px";
+  document
+    .getElementById("mySidenav")
+    .setAttribute("class", "md:w-[375px] w-[320px] navbar sidenav flex justify-center");
   document.getElementById("openNavButton").style.display = "none";
 };
 
@@ -21,7 +24,9 @@ const openNav = () => {
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
 const closeNav = () => {
-  document.getElementById("mySidenav").style.width = "0";
+  document
+    .getElementById("mySidenav")
+    .setAttribute("class", "md:w-0 w-0 navbar sidenav");
   document.getElementById("openNavButton").style.display = "inline";
 };
 

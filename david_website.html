@@ -45,28 +45,28 @@
         <span class="iconamoon--settings-light md:w-10 md:h-10 w-8 h-8"></span
       ></a>
       <div
-        class="w-[350px] h-[275px] flex flex-row justify-around items-center relative mx-5 my-36 bg-yellow-50"
+        class="w-[300px] h-[275px] flex flex-row justify-around items-center relative mx-2 my-36 bg-yellow-50"
       >
-        <div class="w-[30px] h-auto flex flex-col">
+        <div class="w-[32px] h-auto flex flex-col">
           <button id="lowerUp" value="0" class="uiw--caret-up"></button>
           <button id="lowerDown" value="0" class="uiw--caret-down">Down</button>
         </div>
 
-        <div class="w-[225px] h-[250px]">
+        <div class="w-[200px] h-[250px]">
           <canvas
             id="rangeStaff"
-            width="250"
+            width="200"
             height="250"
             class="absolute z-10"
           ></canvas>
           <canvas
             id="rangeNote"
-            width="250"
+            width="200"
             height="250"
             class="absolute z-20"
           ></canvas>
         </div>
-        <div class="w-[30px] h-auto flex flex-col">
+        <div class="w-[32px] h-auto flex flex-col">
           <button id="upperUp" value="25" class="uiw--caret-up">Up</button>
           <button id="upperDown" value="25" class="uiw--caret-down">
             Down
@@ -114,12 +114,14 @@
           </h1>
         </div>
         <div class="relative mt-[-1rem] flex w-full justify-center">
-          <h1 class="lg:text-[1.5em] md:text-[1em] italic font-lato">
+          <h1
+            class="lg:text-[1.5em] md:text-[1em] md:mt-0 mt-1 italic font-lato"
+          >
             For Piano
           </h1>
           <div
             id="score"
-            class="absolute lg:text-[1.5em] md:text-[1em] lg:translate-x-[12em] md:translate-x-[14.5rem] translate-x-[7.5em]"
+            class="absolute lg:text-[1.5em] md:text-[1em] lg:translate-x-[12em] md:translate-x-[14.5rem] translate-x-[7.5em] md:mt-0 mt-1"
           >
             0/0
           </div>

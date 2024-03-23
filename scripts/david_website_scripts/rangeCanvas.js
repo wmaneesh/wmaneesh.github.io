@@ -17,7 +17,7 @@ const drawWholeNoteRange = (posX, posY) => {
 
 const drawLedgerLineRange = (posX, posY) => {
   noteCtxRange.beginPath();
-  noteCtxRange.moveTo(posX - 15, posY);
+  noteCtxRange.moveTo(posX - 12, posY);
   noteCtxRange.lineTo(posX + 30, posY);
   noteCtxRange.lineWidth = 2;
   noteCtxRange.stroke();
@@ -108,13 +108,13 @@ const drawFullLedgerLineRange = () => {
   const image = new Image();
   image.src = fullLedgerRange;
   image.onload = () => {
-    staffCtxRange.drawImage(image, 15, 25, 200, 200);
+    staffCtxRange.drawImage(image, 0, 25, 200, 200);
   };
 };
 
 drawFullLedgerLineRange();
-drawBassNotesRange(0, 0, true, 115);
-drawTrebleNotesRange(5, 1, true, 175);
+drawBassNotesRange(0, 0, true, 90);
+drawTrebleNotesRange(5, 1, true, 155);
 
 const lowerBounderUp = (event, currentUpperBoundValue, lowerRange) => {
   const buttonValue = event.target.value;
@@ -134,7 +134,7 @@ const lowerBounderUp = (event, currentUpperBoundValue, lowerRange) => {
     moveNotesOnRange(newButtonValue, lowerRange);
   }
 
-//   console.log("new button value", lowerBoundUpButton.value);
+  //   console.log("new button value", lowerBoundUpButton.value);
 
   return lowerBoundUpButton.value;
 };
@@ -153,7 +153,7 @@ const lowerBoundDown = (event, lowerRange) => {
 
     moveNotesOnRange(newButtonValue, lowerRange);
   }
-//   console.log("new button value", lowerBoundUpButton.value);
+  //   console.log("new button value", lowerBoundUpButton.value);
   return lowerBoundDownButton.value;
 };
 
@@ -172,7 +172,7 @@ const upperBoundUp = (event, lowerRange) => {
     moveNotesOnRange(newButtonValue, lowerRange);
   }
 
-//   console.log("new button value", upperBounderUpButton.value);
+  //   console.log("new button value", upperBounderUpButton.value);
 
   return upperBounderUpButton.value;
 };
@@ -229,19 +229,14 @@ const moveNotesOnRange = (newButtonValue, lowerRange) => {
   }
 
   if (lowerRange) {
-    noteCtxRange.clearRect(0, 0, 160, 250);
+    noteCtxRange.clearRect(0, 0, 140, 250);
   } else {
-    noteCtxRange.clearRect(160, 0, 250, 250);
+    noteCtxRange.clearRect(140, 0, 200, 250);
   }
 
   if (clefType == 0) {
-    drawBassNotesRange(note.value, octave, ledgerLIne, lowerRange ? 115 : 175);
+    drawBassNotesRange(note.value, octave, ledgerLIne, lowerRange ? 90 : 155);
   } else {
-    drawTrebleNotesRange(
-      note.value,
-      octave,
-      ledgerLIne,
-      lowerRange ? 115 : 175
-    );
+    drawTrebleNotesRange(note.value, octave, ledgerLIne, lowerRange ? 90 : 155);
   }
 };
