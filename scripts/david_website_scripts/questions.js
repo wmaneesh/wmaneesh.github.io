@@ -34,6 +34,8 @@ const selectAnswer = (e) => {
     selectedBtn.classList.add("text-black");
   }
 
+  selectedBtn.disabled = true;
+
   document.getElementById("score").innerHTML = `${score}/${tries}`;
 };
 
