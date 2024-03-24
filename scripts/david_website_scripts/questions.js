@@ -119,6 +119,7 @@ const displayQuestion = (lower, upper) => {
 
 const resetState = () => {
   Array.from(answerButtonElement.children).forEach((el) => {
+    el.disabled = false;
     el.dataset.correct = false;
     el.classList.remove("text-black");
     el.classList.remove("text-[#668d85]");
