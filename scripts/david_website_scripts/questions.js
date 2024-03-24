@@ -113,7 +113,6 @@ const displayQuestion = (lower, upper) => {
   // console.log("correct Button: ", answerButtonElement.children);
 
   correctButton.dataset.correct = true;
-
   answerButtonElement.addEventListener("click", selectAnswer);
 };
 
