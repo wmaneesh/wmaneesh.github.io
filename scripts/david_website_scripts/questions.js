@@ -32,9 +32,12 @@ const selectAnswer = (e) => {
     setTimeout(resetState, 2000);
   } else {
     selectedBtn.classList.add("text-black");
+    selectedBtn.setAttribute("fadeOut", "true");
   }
 
   selectedBtn.disabled = true;
+
+  // console.log("correct Button: ", selectedBtn);
 
   document.getElementById("score").innerHTML = `${score}/${tries}`;
 };
@@ -120,6 +123,7 @@ const resetState = () => {
   Array.from(answerButtonElement.children).forEach((el) => {
     el.disabled = false;
     el.dataset.correct = false;
+    el.setAttribute("fadeOut", "false");
     el.classList.remove("text-black");
     el.classList.remove("text-[#668d85]");
   });

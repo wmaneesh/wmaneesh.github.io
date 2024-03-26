@@ -2011,8 +2011,8 @@ video {
      object-fit: scale-down;
 }
 
-.pr-10 {
-  padding-right: 2.5rem;
+.pr-2 {
+  padding-right: 0.5rem;
 }
 
 .pt-14 {
@@ -2613,6 +2613,10 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:pr-10 {
+    padding-right: 2.5rem;
+  }
+
   .sm\:underline {
     text-decoration-line: underline;
   }

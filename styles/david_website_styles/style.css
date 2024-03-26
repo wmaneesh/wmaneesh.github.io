@@ -88,6 +88,12 @@ body {
   animation: fade-in 1250ms forwards;
 }
 
+#option-buttons button[fadeOut="true"]{
+  inset: 0;
+  animation: fade-out 750ms forwards;
+}
+
+
 .uiw--caret-up {
   display: inline-block;
   width: 2rem;
