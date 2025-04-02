@@ -29,7 +29,7 @@ const selectAnswer = (e) => {
 
     //reset canvas
     quizContainer.setAttribute("closing", "true");
-    setTimeout(resetState, 2000);
+    setTimeout(resetState, 1000);
   } else {
     selectedBtn.classList.add("text-black");
     selectedBtn.setAttribute("fadeOut", "true");
