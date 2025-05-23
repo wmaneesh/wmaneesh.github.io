@@ -45,7 +45,15 @@
             <li><a href="#projects">project</a></li>
             <li><a href="#contacts">contact</a></li>
             <li><a href="david_website.html" target="new">Music</a></li>
-            <li><a href="puzzle.html" target="new">Puzzle</a></li>
+            <li>
+              <a
+                href="puzzle.html"
+                target="new"
+                style="pointer-events: none"
+                id="puzzle"
+                >Puzzle</a
+              >
+            </li>
           </ul>
           <div class="burger">
             <div class="line1"></div>
@@ -347,6 +355,13 @@
       </div>
     </div>
 
+    <!-- Remove this to enable puzzle -->
     <script type="text/javascript" src="scripts/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const link = document.getElementById("puzzle");
+        link.removeAttribute("href");
+      });
+    </script>
   </body>
 </html>
